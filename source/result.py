@@ -28,8 +28,14 @@ class CplexOptimization():
         pass
     
     
-    def add_names(self):
-        pass
+    def add_names_inputs(self):
+        self.names_inputs=[]
+        for i in range(2*28*28):
+            self.names_inputs.append('input_'+str(i))
+            
+        
+        
+        
     
     
     
