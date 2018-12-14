@@ -2,8 +2,10 @@ import argparse
 import sys
 import os
 import tensorflow as tf
+import numpy      as np
 import matplotlib
 import nn
+
 
 def cli():
     
@@ -33,10 +35,16 @@ def main():
     
     C,RC,N,RN = z.get_layer_output(X_test)
     
+    out = z.predict(X_test)
+    
+    prediction_0 = np.argmax(out[0])
+  
+    weights_1 = z.get_weights(1)
+    weights_3 = z.get_weights(3)
     
     
   
-     
-
+  
+    
 if __name__=="__main__":
     main()
